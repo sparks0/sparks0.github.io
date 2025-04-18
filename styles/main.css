@@ -27,6 +27,7 @@ body{
         position: relative;
         left:5px;
         padding:10px;
+        z-index: 1;
     }
 }
 @media only screen and (max-width:750px){ /* mobile view*/
