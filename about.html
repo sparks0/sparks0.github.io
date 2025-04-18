@@ -5,166 +5,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Special+Elite&display=swap" rel="stylesheet">
-        <style>
-            body{
-                padding:0;
-                margin:0;
-                background-color: #393939;
-            }
-            *{  
-                font-family: "Special Elite", system-ui;
-                box-sizing: border-box;
-            }
-            @media only screen and (min-width:625px){ /*desktop view*/
-                #headerButtons{
-                    margin-left:auto;
-                    margin-right:auto;
-                    position: relative;
-                    bottom:70px;
-                    text-align: center;
-                }
-                header{
-                    width:100%;
-                    margin:0;
-                    max-height: 110px;
-                    position: relative;                    
-                }
-                .headerLogo{
-                    display:inline-block;
-                    position: relative;
-                    left:5px;
-                    padding:10px;
-                }
-            }
-            @media only screen and (max-width:625px){ /* mobile view*/
-                #headerButtons{
-                    margin-left:0px;
-                    position: absolute;
-                    top:5px;
-                    right:0px;
-                    width:200px;
-                    text-align: right;
-                }
-                header{
-                    width:100%;
-                    height:170px;
-                    margin:0;
-                    position: relative;
-                    
-                }
-                .headerLogo{
-                    display:inline-block;
-                    position: relative;
-                    left:10px;
-                    margin-top:20px;
-                    padding:10px;
-                }
-            }
-            .gradient-border {  /*Masks the outside of the gradient with overflow hidden*/
-            position: relative;
-            display: inline-block;
-            width:180px;
-            height:40px;
-            border-radius: 23px;
-            overflow: hidden;
-            }
-
-            .gradient-border::before {
-            content: '';
-            position: absolute;
-            inset: -50%;
-            width: 200%;
-            height: 600%;
-            top:-100px;
-            border-radius: 20px;
-            background: linear-gradient(45deg, rgba(255,92,171,1) 0%, rgba(255,92,171,1) 50%, RGB(246, 250, 254) 100%);
-            animation: rotate 2s linear infinite;
-            }
-
-            .gradient-border__content { /*Masks the insdie of the gradient with it's background*/
-            position: absolute;
-            inset: 2px;
-            background: #393939;
-            border-radius: 10px;
-            margin-top:1px;
-            margin-left:-1px;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: "League Gothic", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            font-variation-settings:
-                "wdth" 100;
-            }
-
-            @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-            }
-            .headerButton{
-                display: inline-block;
-                padding:5px;
-                margin-top:0;
-                padding-top: 0;
-                margin-left:20px;
-                margin-right:20px;
-                font-size:23pt;
-                color:white;
-                font-weight: 700;
-                font-style: normal;
-                text-align: center;
-                vertical-align: top;
-                font-family: "League Gothic", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: 400;
-                font-style: normal;
-                font-variation-settings:
-                    "wdth" 100;
-            }
-            .poster{
-                background-color:white;
-                display:inline-block;
-                width:100%;
-                background-image: url("images/signs-1.jpg");
-                background-size: cover;
-                background-position: center;
-            }
-            #posterText{
-                margin-left:auto;
-                margin-right:auto;
-                position: relative;
-                background-color: rgba(0,0,0,0.6);
-                text-align: center;
-                color:white;
-                font-size: 15pt;
-                padding-left:20px;
-                padding-right:20px;
-                padding-top: 5px;
-                margin-top: 40px;
-                margin-bottom: 40px;
-                padding-bottom: 10px;
-                border-radius: 20px;
-                max-width:600px;
-            }
-            .plink{
-                text-decoration: none;
-                color:#FF5CAB;
-                margin-top:-3px;
-                border-radius: 10px;
-                padding-bottom:0px;
-            }
-            footer{
-                width:100%;
-                overflow: hidden;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: right;
-                padding:20px;
-            }
-        </style>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/about.css">
     </head>
     <body>
         <header>
@@ -176,10 +18,14 @@
                 <a href="get-involved.html"><div class="gradient-border headerButton plink"><div class="gradient-border__content">Get Involved</div></div></a>
             </div>
         </header>
-        <div class="poster">
-            <div id="posterText">
-                <h1>DYKE MARCH STHLM</h1>
-                <p>Dyke March Stockholm is a demonstration by and for all dykes in the broadest sense. We choose to use the term "Dyke" as an umbrella term which includes a diverse range of people who may all have common experiences and experiences of existing in the world</p>
+        <div id="container">
+            <div id="poster"></div>
+            <div id="info">
+                <h1>Dyke March Stockholm</h1>
+                <h2>is a demonstration that unites and uplifts dykes in all their beautiful diversity</h2>
+                <p>We embrace the team as an inclusive umbrella, welcoming lesbian dykes; bisexual dykes; pansexual dykes; trans dykes; non-binary dykes; butch dykes; femme dykes; queer dykes; dykes who are unsure if they are dykes; dykes who are dykes in silence; dykes who want to shout that they are dykes from the rooftops</p>
+                <p>This demonstration wants to amplify our voices by fighting marginalization and fostering LGBTQIA+ unity.</p>
+                <p>We invite all dykes who resonate with our experience to join us, as we proudly march towards a brighter future for all!</p>
             </div>
         </div>
         <footer>
